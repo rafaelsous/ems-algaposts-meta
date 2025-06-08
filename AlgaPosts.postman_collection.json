@@ -1,0 +1,418 @@
+{
+	"info": {
+		"_postman_id": "1da3523c-a2d5-490f-9eef-273e22f0ff59",
+		"name": "AlgaPosts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1510533"
+	},
+	"item": [
+		{
+			"name": "Post Service",
+			"item": [
+				{
+					"name": "Create Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"/*var jsonData = pm.response.json();\r",
+									"pm.collectionVariables.set(\"validPostId\", jsonData.id);*/"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Post title\",\r\n    \"body\": \"First row\\nSecond row\\nThird row\\nForth row\\nFifth row\",\r\n    \"author\": \"Rafael Sousa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Empty Fields",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"\",\r\n    \"body\": \"\",\r\n    \"author\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Body Too Long",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Post title\",\r\n    \"body\": \"Lorem ipsum eget tellus habitant imperdiet sollicitudin elit nec integer quisque sociosqu, lobortis molestie egestas eros class gravida eleifend nunc congue mauris, semper primis arcu est ad rhoncus elementum senectus ac platea. pharetra habitant semper cursus tincidunt ante fusce varius hendrerit, dapibus faucibus tempor etiam faucibus vel habitant at vulputate,  vestibulum, sit pretium facilisis sapien facilisis aptent. \\\\r\\\\nSapien ultricies gravida amet fermentum senectus diam lorem id laoreet vehicula, sollicitudin sapien cubilia ante posuere molestie interdum consequat pulvinar vestibulum, urna nulla facilisis placerat porta blandit praesent vehicula ultricies. in ut facilisis turpis nisi proin hendrerit donec sed sagittis malesuada. posuere molestie interdum consequat pulvinar vestibulum, urna nulla facilisis placerat porta blandit praesent vehicula ultricies. in ut facilisis turpis nisi proin hendrerit donec sed sagittis malesuada. posuere molestie interdum consequat pulvinar vestibulum, urna nulla facilisis placerat porta blandit praesent vehicula ultricies. in ut facilisis turpis nisi proin hendrerit donec sed sagittis malesuada.\",\r\n    \"author\": \"Rafael Sousa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": ""
+						},
+						{
+							"name": "Valid Fields",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Post title\",\r\n    \"body\": \"First row\\nSecond row\\nThird row\\nForth row\\nFifth row\",\r\n    \"author\": \"Rafael Sousa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Text Update Failure",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Text update failure test\",\r\n    \"body\": \"First row\\nSecond row\\nThird row\\nForth row\\nFifth row\",\r\n    \"author\": \"Rafael Sousa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": ""
+						},
+						{
+							"name": "Text Processing Failute",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Text processing failure test\",\r\n    \"body\": \"First row\\nSecond row\\nThird row\\nForth row\\nFifth row\",\r\n    \"author\": \"Rafael Sousa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Search Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "id,desc",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Post by ID",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// const uuid = require('uuid'); // Apenas necessário se estiver rodando Node.js\r",
+									"\r",
+									"pm.sendRequest(\"http://localhost:8080/api/posts\", function (err, res) {\r",
+									"    if (err) {\r",
+									"        console.error(\"Erro na requisição:\", err);\r",
+									"        return;\r",
+									"    }\r",
+									"\r",
+									"    let jsonData = res.json();\r",
+									"\r",
+									"    console.log(jsonData)\r",
+									"    \r",
+									"    if (jsonData.content && jsonData.content.length > 0) {\r",
+									"        pm.collectionVariables.set(\"validPostId\", jsonData.content[0].id);\r",
+									"    } else {\r",
+									"        let generatedUuid = pm.variables.get(\"uuid\") || crypto.randomUUID();\r",
+									"        pm.collectionVariables.set(\"validPostId\", generatedUuid);\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/posts/:postId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"posts",
+								":postId"
+							],
+							"variable": [
+								{
+									"key": "postId",
+									"value": "01974bb1-18a2-75b6-8d39-ea858f25c317"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inexistente ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/posts/:postId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"posts",
+										":postId"
+									],
+									"variable": [
+										{
+											"key": "postId",
+											"value": "019746e3-98be-7ad9-8e18-561b854e81d5"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Find Post by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/posts/:postId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"posts",
+										":postId"
+									],
+									"variable": [
+										{
+											"key": "postId",
+											"value": "{{validPostId}}"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "validPostId",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

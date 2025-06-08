@@ -1,0 +1,8 @@
+[submodule "microservices/post-service"]
+	path = microservices/post-service
+	url = git@github.com:rafaelsous/ems-algaposts-post-service.git
+	branch = main
+[submodule "microservices/text-processor-service"]
+	path = microservices/text-processor-service
+	url = git@github.com:rafaelsous/ems-algaposts-text-processor-service.git
+	branch = main
