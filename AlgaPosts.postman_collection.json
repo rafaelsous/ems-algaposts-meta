@@ -157,7 +157,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"title\": \"Text update failure test\",\r\n    \"body\": \"First row\\nSecond row\\nThird row\\nForth row\\nFifth row\",\r\n    \"author\": \"Rafael Sousa\"\r\n}",
+									"raw": "{\r\n    \"title\": \"Failure Test\",\r\n    \"body\": \"Text update failure test with seven words\",\r\n    \"author\": \"Rafael Sousa\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -193,7 +193,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"title\": \"Text processing failure test\",\r\n    \"body\": \"First row\\nSecond row\\nThird row\\nForth row\\nFifth row\",\r\n    \"author\": \"Rafael Sousa\"\r\n}",
+									"raw": "{\r\n    \"title\": \"Failure Test\",\r\n    \"body\": \"Text processing failure test\",\r\n    \"author\": \"Rafael Sousa\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
